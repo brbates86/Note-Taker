@@ -17,8 +17,8 @@ app.get('/', function (req, res) {
 });
 
 // Notes html and it's "url"
-app.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "/public/notes.html"));
+app.get('/notes', function (req, res) {
+    res.sendFile(path.join(__dirname, '/public/notes.html'));
 })
 
 //===============================================================================
@@ -26,14 +26,14 @@ app.get("/notes", function (req, res) {
 //===============================================================================
 
 // Since the GET and POST functions grab from the same route, we can set it once up here.
-app.route("/api/notes")
+app.route('/api/notes')
     // Grab the notes list (this should be updated for every new note and deleted note.)
     .get(function (req, res) {
         res.json(database);
     })
 
 
-    postMessage(function (req, res) {
+    .post(function (req, res) {
         let jsonFilePath = path.join(__dirname, '/db/db.json');
         let newNote = req.body;
 
@@ -58,15 +58,15 @@ app.route("/api/notes")
             if (err) {
                 return console.log(err);
             }
-            console.log("Your note was saved!");
+            console.log('Your note was saved!');
         });
         // Gives back the response, which is the user's new note. 
         res.json(newNote);
     });
 
 
-    app.delete("/api/notes/:id", function (req, res) {
-        let jsonFilePath = path.join(__dirname, "/db/db.json");
+    app.delete('/api/notes/:id', function (req, res) {
+        let jsonFilePath = path.join(__dirname, '/db/db.json');
 
         for (let i = 0; i < database.length; i++) {
             if (database[i].id == req.params.id) {
@@ -88,5 +88,5 @@ app.route("/api/notes")
 });
 
 app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
+    console.log('App listening on PORT' + PORT);
 });
