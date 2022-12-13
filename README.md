@@ -5,7 +5,7 @@ Heres the video link:
 https://app.castify.com/view/07f9ede9-64d6-44ec-89cd-852da7855f5b
 
 
-Here is the link to heroku 
+Here is the heroku link to try it for yourself!
 
 https://evening-spire-84647.herokuapp.com/
 
