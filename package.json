@@ -2,7 +2,7 @@
   "name": "note-taker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./Develop/public/assets/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +10,24 @@
     "type": "git",
     "url": "git+https://github.com/brbates86/Note-Taker.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "application",
+    "mysql",
+    "express",
+    "note",
+    "taker",
+    "coding",
+    "bootcamp"
+  ],
+  "author": "Brett Bates",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/brbates86/Note-Taker/issues"
   },
   "homepage": "https://github.com/brbates86/Note-Taker#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.17.1",
+    "jest": "^25.1.0",
+    "mysql": "^2.18.0"
   }
 }
